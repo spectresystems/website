@@ -1,0 +1,68 @@
+﻿Title: Release Notes
+Order: 2
+ShowRightSidebar: true
+ShowEditLink: true
+EditLink: https://github.com/spectresystems/ghostly/edit/master/release-notes.json
+Description: Release notes for Ghostly
+---
+
+@{
+    var definition = Context.Outputs
+    .FromPipeline(nameof(ReleaseNotesPipeline))
+    .First()
+    .GetChildren("ReleaseNotes")
+    .OfType<ObjectDocument<ReleaseNotes>>()
+    .First().Object;
+}
+
+@{ var first = true;}
+@foreach (var item in definition.Releases.OrderByDescending(x => x.Version))
+{
+    <div class="card">
+        <h4 class="card-header">
+            @item.Version
+            @if (first)
+            {
+                <span class="badge badge-dark float-right">Latest</span>
+                first = false;
+            }
+        </h4>
+        <div class="card-body">
+
+            @foreach (var entryGroup in item.Entries.GroupBy(x => x.Kind))
+            {
+                if (entryGroup.Key == "feature")
+                {
+                    <h5 class="card-title">New features:</h5>
+                }
+                else if (entryGroup.Key == "improvement")
+                {
+                    <h5 class="card-title">Improvements:</h5>
+                }
+                else if (entryGroup.Key == "bug")
+                {
+                    <h5 class="card-title">Bug fixes:</h5>
+                }
+                else
+                {
+                    <h4>???:</h4>
+                }
+                <p class="card-text">
+                    <ul>
+                        @foreach (var entry in entryGroup)
+                        {
+                            <li>
+                                @entry.Description
+                                @if (!string.IsNullOrWhiteSpace(entry.Link))
+                                {
+                                    <a href="@entry.Link">Link</a>
+                                }
+                            </li>
+                        }
+                    </ul>
+                </p>
+            }
+        </div>
+    </div>
+    <br />
+}
