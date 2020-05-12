@@ -1,0 +1,58 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #333333;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: blue;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#logo {
+  width: 256px;
+  height: 256px;
+  display: inline-block;
+  opacity: 0.5;
+  margin-bottom: 20px;
+  animation:8s infinite ghostly;
+  -webkit-animation:8s infinite ghostly;
+  opacity:1
+}
+
+@keyframes ghostly {
+  0% { opacity: 0.03; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0.03; }
+}
+@-webkit-keyframes ghostly {
+  0% { opacity: 0.03; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0.03; }
+}
+
+.company-name {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 48px;
+  letter-spacing: 0.25em;
+  margin-bottom: 0.25em;
+  display:block;
+}
+
+.ghostly {
+  margin-top: 20px;
+}

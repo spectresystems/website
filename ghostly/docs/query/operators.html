@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html><html><head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="/mirror/www.googletagmanager.com/gtag/js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-145723988-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="/assets/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="/assets/ghostly/css/styles.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&amp;family=Roboto+Slab:wght@400;700&amp;family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap" rel="stylesheet" data-no-mirror="">
+    <link rel="stylesheet" href="/mirror/cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+    <script src="/mirror/code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="/mirror/cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="/mirror/stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror=""></script>
+    <script src="/mirror/cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script src="/mirror/cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script src="/mirror/cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror=""></script>
+
+    <title>Ghostly - Operators</title>
+</head>
+<body class="d-flex flex-column">
+    <div class="flex-grow-1 d-flex flex-column">
+        <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+            <div class="container py-3">
+                <a class="navbar-brand" href="/ghostly"><img id="logo" src="/assets/ghostly/logo.svg" alt="Ghostly"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText" style="margin-left: 20px;">
+                    <ul class="navbar-nav mr-auto">
+                        <li id="nav-docs" class="nav-item">
+                            <a class="nav-link text-white font-weight-light font-size-lg" href="/ghostly/docs">Documentation</a>
+                        </li>
+                        <li class="nav-item mx-3 border-right d-none d-lg-block"></li>
+                        <li id="nav-docs" class="nav-item">
+                            <a class="nav-link text-white font-weight-light font-size-lg" href="https://github.com/spectresystems/ghostly/issues/new/choose">Report an issue</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark font-size-lg" href="https://www.microsoft.com/store/apps/9N5MVRB0XC60?cid=storebadge&amp;ocid=badge"><i class="fab fa-microsoft"></i> Download from Microsoft Store</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex-grow-1 d-flex flex-column section-ghostly">
+                <div id="titlebar" class="py-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                <div class="text-white m-0 title">Operators</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="flex-grow-1 d-flex flex-column">
+                    <div class="container flex-grow-1 d-flex flex-column bg-white">
+                        <div class="row flex-grow-1 align-items-stretch">
+                                <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body" style="padding-top: 10px !important">
+                                            <div class="sidebar-nav-item has-children" style="padding-top: 0">
+                                                    <a href="/ghostly/docs">Documentation</a>
+                                                </div>
+                                                    <div class="sidebar-nav-item has-children" style="padding-top: 0">
+                                                        <a href="/ghostly/docs/query">Query Language</a>
+                                                    </div>
+                                                    <div class="sidebar-nav-children active">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/ghostly/docs/query/examples">Examples</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child active">
+                                                                <a href="/ghostly/docs/query/operators">Operators</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/ghostly/docs/query/properties">Properties</a>
+                                                            </div>
+                                                    </div>
+                                                    <div class="sidebar-nav-item" style="padding-top: 0">
+                                                        <a href="/ghostly/docs/release-notes">Release Notes</a>
+                                                    </div>
+                                                    <div class="sidebar-nav-children">
+                                                    </div>
+                                                    <div class="sidebar-nav-item" style="padding-top: 0">
+                                                        <a href="/ghostly/docs/privacy">Privacy Statement</a>
+                                                    </div>
+                                                    <div class="sidebar-nav-children">
+                                                    </div>
+                                </div>
+                                <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4" style="margin-top: 20px">
+                                    <h1 id="comparison-operators">Comparison operators</h1>
+<div class="table-responsive">
+<table class="table">
+  <tbody>
+  <tr>
+    <th width="150">Operator</th>
+    <th width="250">Example</th>
+  </tr>
+  <tr>
+    <td><code>=</code></td>
+    <td>
+        <code>author=patriksvensson</code> matches all items
+        where the author is exactly <code>patriksvensson</code>.
+    </td>
+  </tr>
+  <tr>
+    <td><code>:</code></td>
+    <td>
+        <code>author:patrik</code> matches all items
+        where the author contains <code>patrik</code> such as 
+        <code>patriksvensson</code>.
+    </td>
+  </tr>
+  <tr>
+    <td><code>!=</code></td>
+    <td>
+        <code>author!=patriksvensson</code> matches all items
+        where the author is not <code>patriksvensson</code>.
+    </td>
+  </tr>
+  <tr>
+    <td><code>&lt;</code></td>
+    <td>
+        <code>id&lt;100</code> matches all items
+        where the GitHub ID is less than 100.
+    </td>
+  </tr>
+  <tr>
+    <td><code>&lt;=</code></td>
+    <td>
+        <code>id&lt;=100</code> matches all items
+        where the GitHub ID is less than or equal to <code>100</code>.
+    </td>
+  </tr>
+  <tr>
+    <td><code>&gt;</code></td>
+    <td>
+        <code>id&gt;100</code> matches all items
+        where the GitHub ID is greater than <code>100</code>.
+    </td>
+  </tr>
+  <tr>
+    <td><code>&lt;=</code></td>
+    <td>
+        <code>id&gt;=100</code> matches all items
+        where the GitHub ID is greater than or equal to <code>100</code>.
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<h1 id="logical-operators">Logical operators</h1>
+<h2 id="and">And</h2>
+<p>If you need to combine two or more statements via a conjunction you can use the <code>AND</code> logical operator.</p>
+<pre><code class="language-custom">author=patriksvensson and id&gt;100
+</code></pre>
+<p>Will return all items which have <code>patriksvensson</code> as an author and
+an ID that it less than <code>100</code></p>
+<h2 id="or">Or</h2>
+<p>If you need to combine two or more statements via a disjunction you can use the <code>OR</code> logical operator.</p>
+<pre><code class="language-custom">author=patriksvensson or author=gep13
+</code></pre>
+<p>Will return all items which either have <code>patriksvensson</code> or <code>gep13</code> as an author.</p>
+<h2 id="not">Not</h2>
+<p>Sometimes you want to exclude a specific result from a query. You can do this by using the <code>NOT</code> keyword.</p>
+<pre><code class="language-custom">not author:patrik
+</code></pre>
+<p>Will return all items where the author's username does not contain <code>patrik</code>.</p>
+
+                                </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3" style="padding-top: 10px !important; padding-left: 30px !important">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#comparison-operators">Comparison operators</a></p>
+                                                    <p class="small"><a href="#logical-operators">Logical operators</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/spectresystems/website/edit/develop/input/ghostly/docs/query/operators.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="p-3 text-white font-size-sm">
+        <div class="container">
+            <div>© 2018-2020 Spectre Systems AB</div>
+        </div>
+    </div>
+
+</body></html>
