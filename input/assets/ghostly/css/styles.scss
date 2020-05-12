@@ -166,6 +166,10 @@ h2, h3 {
     background-color: $gray-900;
 }
 
+#ghostly-footer {
+    background: #96DCEA linear-gradient(180deg, lighten(#96DCEA, 10%), #59B0C1) repeat-x !important;
+}
+
 $sections: () !default;
 $sections: map-merge(
     (
