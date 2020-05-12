@@ -243,6 +243,8 @@ h2, h3 { color: #48bdfe; }
 
 #footer { background-color: #212529; }
 
+#ghostly-footer { background: #96DCEA linear-gradient(180deg, #c1eaf3, #59B0C1) repeat-x !important; }
+
 .bg-ghostly { background-color: #6ccee2; }
 
 .text-ghostly { color: #96DCEA; }
