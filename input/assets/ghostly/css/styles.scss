@@ -167,7 +167,8 @@ h2, h3 {
 }
 
 #ghostly-footer {
-    background: #96DCEA linear-gradient(180deg, lighten(#96DCEA, 10%), #59B0C1) repeat-x !important;
+    //background: #96DCEA linear-gradient(180deg, lighten(#96DCEA, 10%), #59B0C1) repeat-x !important;
+    background: lighten(#96DCEA, 10%);
 }
 
 $sections: () !default;
