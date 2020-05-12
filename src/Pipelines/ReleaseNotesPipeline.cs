@@ -15,7 +15,7 @@ namespace Site
             {
                 new ExecuteConfig(
                     Config.FromContext(ctx => {
-                        return new ReadWeb("https://raw.githubusercontent.com/spectresystems/ghostly/master/release-notes.json");
+                        return new ReadFiles("ghostly/release-notes.json");
                     }))
             };
 

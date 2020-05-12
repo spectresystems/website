@@ -12,6 +12,7 @@ namespace Site
     public sealed class ReleaseNote
     {
         public Version Version { get; set; }
+        public string Date { get; set; }
         public List<ReleaseEntry> Entries { get; set; }
     }
 
