@@ -73,7 +73,7 @@
             {
                 <div id="titlebar" class="py-4" style="padding-top: 0px !important">
                     <div class="container">
-                        <div class="row">
+                        @* <div class="row">
                             @{
                                 string titleBarClasses = Document.GetBool(Constants.NoSidebar) ? string.Empty : "offset-md-3 offset-lg-2";
                             }
@@ -84,7 +84,7 @@
                                     @RenderSection(Constants.Sections.Subtitle, false)
                                 }
                             </div>
-                        </div>
+                        </div> *@
                     </div>
                 </div>
             }
@@ -97,7 +97,7 @@
                 }
                 else
                 {
-                    <div class="container flex-grow-1 d-flex flex-column bg-white">
+                    <div class="container flex-grow-1 d-flex flex-column ">
                         <div class="row flex-grow-1 align-items-stretch">
                             @if (Document.GetBool(Constants.NoSidebar))
                             {
@@ -135,22 +135,29 @@
                                                     <div class="sidebar-nav-item @(Document.IdEquals(child) ? "active" : null) @(child.HasChildren() ? "has-children" : null)" style="padding-top: 0">
                                                         @Html.DocumentLink(child)
                                                     </div>
-
-                                                    <div class="sidebar-nav-children @(Document.IdEquals(child) || child.GetChildren().Any(x => Document.IdEquals(x)) ? "active" : null)">
-                                                        @foreach (IDocument childchild in child.GetChildren().OnlyVisible())
-                                                        {
-                                                            <div class="sidebar-nav-child @(Document.IdEquals(childchild) ? "active" : null)">
-                                                                @Html.DocumentLink(childchild)
-                                                            </div>
-                                                        }
-                                                    </div>
+                                                    
+                                                    @if(child.HasChildren()) 
+                                                    {
+                                                        <div class="sidebar-nav-children @(Document.IdEquals(child) || child.GetChildren().Any(x => Document.IdEquals(x)) ? "active" : null)" style="padding-bottom: 0">
+                                                            @foreach (IDocument childchild in child.GetChildren().OnlyVisible())
+                                                            {
+                                                                <div class="sidebar-nav-child @(Document.IdEquals(childchild) ? "active" : null)">
+                                                                    @Html.DocumentLink(childchild)
+                                                                </div>
+                                                            }
+                                                        </div>
+                                                    }
                                                 }
                                             }
                                         }
                                     }
                                 </div>
-                                <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4" style="margin-top: 20px">
-                                    @RenderBody()
+                                <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4" style="background: white; border-top-left-radius: 8px; border-top-right-radius: 8px; border-style: solid; border-color: white">
+                                    <div style="margin-top: 20px;">
+                                        <h1>@(Document.GetString(Keys.Title) ?? Document.GetTitle())</h1>
+                                        <hr />
+                                        @RenderBody()
+                                    </div>
                                 </div>
                             }
                             @if (Document.GetBool("ShowRightSidebar", true))
