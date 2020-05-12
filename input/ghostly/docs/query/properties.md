@@ -1,5 +1,6 @@
 ﻿Title: Properties
 Order: 3
+Description: Explains the different available query properties Ghostly
 ---
 
 Properties are fields that you can use in your queries or filters.

@@ -1,5 +1,6 @@
 ﻿Title: Operators
 Order: 2
+Description: Explains the different operators available when querying in Ghostly
 ---
 
 # Comparison operators
