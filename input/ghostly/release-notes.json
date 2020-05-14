@@ -194,6 +194,28 @@
                     "description": "Notifications marked as read in GitHub was sometimes not marked as read in Ghostly."
                 }
             ]
+        },
+        {
+            "version": "1.7.0",
+            "date": "2020-05-14",
+            "entries": [
+                {
+                    "kind": "feature",
+                    "description": "Added button to refresh individual notifications."
+                },
+                {
+                    "kind": "feature",
+                    "description": "Improved touch support"
+                },
+                {
+                    "kind": "feature",
+                    "description": "Added swipe button for moving notifications"
+                },
+                {
+                    "kind": "feature",
+                    "description": "Added swipe button for opening notification in browser"
+                }
+            ]
         }
     ]
 }
