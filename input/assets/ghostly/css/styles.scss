@@ -150,7 +150,7 @@ h2, h3 {
 }
 
 #hero {
-    background: $orange linear-gradient(180deg, darken($orange, 5%),darken(#F2BB54, 5%)) repeat-x !important;
+    background: $orange linear-gradient(180deg, #96DCEA, lighten(#96DCEA, 10%)) repeat-x !important;
 }
 
 .product-wordmark {
