@@ -145,7 +145,7 @@
             "entries": [
                 {
                     "kind": "feature",
-                    "description": "Auto completion for Ghostly's query language. This should make it easier to create filters, rules, and write queries."
+                    "description": "Added auto completion for Ghostly's query language. This should make it easier to create filters, rules, and write queries."
                 },
                 {
                     "kind": "bug",
@@ -204,7 +204,7 @@
                     "description": "Added button to refresh individual notifications."
                 },
                 {
-                    "kind": "feature",
+                    "kind": "improvement",
                     "description": "Improved touch support"
                 },
                 {
@@ -214,6 +214,16 @@
                 {
                     "kind": "feature",
                     "description": "Added swipe button for opening notification in browser"
+                }
+            ]
+        },
+        {
+            "version": "1.8.0",
+            "date": "2020-05-25",
+            "entries": [
+                {
+                    "kind": "bug",
+                    "description": "Fixed bug where notification quick-buttons sometimes would disappear."
                 }
             ]
         }
