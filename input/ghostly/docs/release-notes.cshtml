@@ -1,6 +1,6 @@
 ﻿Title: Release Notes
 Order: 2
-ShowRightSidebar: true
+ShowRightSidebar: false
 ShowEditLink: true
 EditLink: https://github.com/spectresystems/ghostly/edit/master/release-notes.json
 Description: Release notes for Ghostly
@@ -15,57 +15,30 @@ Description: Release notes for Ghostly
     .First().Object;
 }
 
-@{ var first = true;}
 @foreach (var item in definition.Releases.OrderByDescending(x => x.Version))
 {
-    <div class="card">
-        <h4 class="card-header">
-            @item.Version
-            @if (first)
-            {
-                <span class="badge badge-primary float-right">Latest</span>
-                first = false;
-            }
-        </h4>
-        <div class="card-body">
+    <h2>Ghostly @item.Version.ToString(3) <small class="float-right">@item.Date</small></h2>
+    <table class="table table-borderless">
+    <tbody>
+    @foreach (var entry in item.Entries.OrderBy(x => x.Kind))
+    {
+        <tr>
+            <td width="80" style="padding-left: 0;">
+                @if(entry.Kind == "feature") {
+                    <span class="badge badge-primary">New feature</span>
+                }
+                else if (entry.Kind == "improvement") {
+                    <span class="badge badge-success">Improved</span>
+                }
+                else if (entry.Kind == "bug") {
+                    <span class="badge badge-danger">Fixed</span>
+                }
+            </td>
+            <td>@entry.Description</td>
+        </tr>
+    }
+    </tbody>
+    </table>
 
-            @foreach (var entryGroup in item.Entries.GroupBy(x => x.Kind))
-            {
-                if (entryGroup.Key == "feature")
-                {
-                    <h5 class="card-title">New features:</h5>
-                }
-                else if (entryGroup.Key == "improvement")
-                {
-                    <h5 class="card-title">Improvements:</h5>
-                }
-                else if (entryGroup.Key == "bug")
-                {
-                    <h5 class="card-title">Bug fixes:</h5>
-                }
-                else
-                {
-                    <h4>???:</h4>
-                }
-                <p class="card-text">
-                    <ul>
-                        @foreach (var entry in entryGroup)
-                        {
-                            <li>
-                                @entry.Description
-                                @if (!string.IsNullOrWhiteSpace(entry.Link))
-                                {
-                                    <a href="@entry.Link">Link</a>
-                                }
-                            </li>
-                        }
-                    </ul>
-                </p>
-            }
-        </div>
-        <div class="card-footer text-muted bg-white">
-            <small>Released @item.Date</small>
-        </div>
-    </div>
-    <br />
+    <hr />
 }
