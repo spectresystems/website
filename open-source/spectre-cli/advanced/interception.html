@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145723988-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-145723988-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="/assets/ghostly/css/styles.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+    <title>Ghostly - Interception</title>
+</head>
+<body class="d-flex flex-column">
+    <div class="flex-grow-1 d-flex flex-column">
+        <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+            <div class="container py-3">
+                <a class="navbar-brand" href="/ghostly"><img id="logo" src="/assets/open-source/logo.svg" alt="Ghostly"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText" style="margin-left: 20px;">
+                    <ul class="navbar-nav mr-auto">
+                        <li id="nav-docs" class="nav-item">
+                                <a class="nav-link text-white font-weight-light font-size-lg" href="/open-source/spectre-cli">Spectre.Cli</a>
+                        </li>
+                        <li id="nav-docs" class="nav-item">
+                            <li class="nav-item mx-3 border-right d-none d-lg-block"></li>
+                            <a class="nav-link text-white font-weight-light font-size-lg" href="/open-source/spectre-cli">Snitch</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark font-size-lg" href="https://github.com/spectresystems"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="flex-grow-1 d-flex flex-column section-open-source">
+                    <div id="titlebar" class="py-4" style="padding-top: 0px !important">
+                        <div class="container">
+                        </div>
+                    </div>
+                <div class="flex-grow-1 d-flex flex-column">
+                        <div class="container flex-grow-1 d-flex flex-column ">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body" style="padding-top: 10px !important;">
+                                                <div class="sidebar-nav-item has-children" style="padding-top: 0">
+                                                    <a href="/open-source/spectre-cli">What is Spectre.Cli?</a>
+                                                </div>
+                                                        <div class="sidebar-nav-item" style="padding-top: 0">
+                                                            <a href="/open-source/spectre-cli/getting-started">Getting started</a>
+                                                        </div>
+                                                        <div class="sidebar-nav-item" style="padding-top: 0">
+                                                            <a href="/open-source/spectre-cli/examples">Examples</a>
+                                                        </div>
+                                                        <div class="sidebar-nav-item has-children" style="padding-top: 0">
+                                                            <a href="/open-source/spectre-cli/fundamentals">Fundamentals</a>
+                                                        </div>
+                                                            <div class="sidebar-nav-children" style="padding-bottom: 0">
+                                                                    <div class="sidebar-nav-child">
+                                                                        <a href="/open-source/spectre-cli/fundamentals/arguments">Arguments</a>
+                                                                    </div>
+                                                                    <div class="sidebar-nav-child">
+                                                                        <a href="/open-source/spectre-cli/fundamentals/commands">Commands</a>
+                                                                    </div>
+                                                                    <div class="sidebar-nav-child">
+                                                                        <a href="/open-source/spectre-cli/fundamentals/flags">Flags</a>
+                                                                    </div>
+                                                                    <div class="sidebar-nav-child">
+                                                                        <a href="/open-source/spectre-cli/fundamentals/options">Options</a>
+                                                                    </div>
+                                                                    <div class="sidebar-nav-child">
+                                                                        <a href="/open-source/spectre-cli/fundamentals/validation">Validation</a>
+                                                                    </div>
+                                                            </div>
+                                                        <div class="sidebar-nav-item has-children" style="padding-top: 0">
+                                                            <a href="/open-source/spectre-cli/advanced">Advanced</a>
+                                                        </div>
+                                                            <div class="sidebar-nav-children active" style="padding-bottom: 0">
+                                                                    <div class="sidebar-nav-child">
+                                                                        <a href="/open-source/spectre-cli/advanced/dependency-injection">Dependency Injection</a>
+                                                                    </div>
+                                                                    <div class="sidebar-nav-child">
+                                                                        <a href="/open-source/spectre-cli/advanced/delegate-commands">Delegate Commands</a>
+                                                                    </div>
+                                                                    <div class="sidebar-nav-child">
+                                                                        <a href="/open-source/spectre-cli/advanced/generate-schema">Generate Schema</a>
+                                                                    </div>
+                                                                    <div class="sidebar-nav-child active">
+                                                                        <a href="/open-source/spectre-cli/advanced/interception">Interception</a>
+                                                                    </div>
+                                                                    <div class="sidebar-nav-child">
+                                                                        <a href="/open-source/spectre-cli/advanced/pair-deconstruction">Pair Deconstruction</a>
+                                                                    </div>
+                                                                    <div class="sidebar-nav-child">
+                                                                        <a href="/open-source/spectre-cli/advanced/type-converters">Type Converters</a>
+                                                                    </div>
+                                                                    <div class="sidebar-nav-child">
+                                                                        <a href="/open-source/spectre-cli/advanced/unsafe-configuration">Unsafe Configuration</a>
+                                                                    </div>
+                                                            </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4"
+                                         style="background: white; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; border-style: solid; border-color: white">
+                                        <div style="margin-top: 20px;">
+                                            <h1>Interception</h1>
+                                            <hr />
+                                            <p><em>To be written</em></p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3" style="padding-top: 10px !important; padding-left: 30px !important">
+                                            <p class="small font-weight-bold"><a href="https://github.com/spectresystems/website/edit/develop/input/open-source/spectre-cli/advanced/interception.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                    </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+            <div id="ghostly-footer" class="p-3 text-gray font-size-sm text-center" style="margin-top: 20px; margin-bottom: 10px;">
+                <div class="container">
+                    <div style="color: #57A1AF">© 2018-2020 Spectre Systems AB</div>
+                </div>
+            </div>
+    </body>
+</html>
