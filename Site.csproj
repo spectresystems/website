@@ -22,7 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Statiq.Web" Version="1.0.0-alpha.9" />
+    <PackageReference Include="Statiq.Web" Version="1.0.0-alpha.16" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="input\assets\open-source\" />
   </ItemGroup>
 
 </Project>

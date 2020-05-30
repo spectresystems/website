@@ -167,19 +167,11 @@ h2, h3 {
 }
 
 #ghostly-footer {
-    //background: #96DCEA linear-gradient(180deg, lighten(#96DCEA, 10%), #59B0C1) repeat-x !important;
     background: lighten(#96DCEA, 10%);
 }
 
 $sections: () !default;
-$sections: map-merge(
-    (
-        "ghostly": #96DCEA,
-        "docs": $orange,
-        "contribute": $blue
-    ),
-    $sections
-);
+$sections: map-merge( ( "ghostly": #96DCEA, "open-source": #96DCEA ), $sections );
 
 @each $section, $color in $sections {
     .bg-#{$section} {
