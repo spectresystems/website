@@ -1,5 +1,19 @@
 ﻿<!DOCTYPE html>
 <html>
+
+@{
+    var project = Document.Destination.Segments.Length > 1 ? Document.Destination.Segments[1].ToString() : null;
+    project = project == "index.html" ? null : project;
+    var logo = "/assets/open-source/logo.svg";
+    var link = "/open-source/";
+    var titlePrefix = "Spectre Systems - Open Source";
+    if(project == "spectre-cli") {
+        logo = "/assets/open-source/spectre-cli/logo.svg";
+        link = "/open-source/spectre-cli/";
+        titlePrefix = "Spectre.Cli";
+    }
+}
+
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145723988-1"></script>
@@ -30,21 +44,10 @@
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
 
     @{
-        string title = @Document.ContainsKey(Keys.Title) ? $"Ghostly - {Document.GetString(Keys.Title)}" : "Ghostly";
+        string title = @Document.ContainsKey(Keys.Title) ? $"{titlePrefix} - {Document.GetString(Keys.Title)}" : $"{titlePrefix}";
     }
     <title>@title</title>
 </head>
-
-@{
-    var project = Document.Destination.Segments.Length > 1 ? Document.Destination.Segments[1].ToString() : null;
-    project = project == "index.html" ? null : project;
-    var logo = "/assets/open-source/logo.svg";
-    var link = "/open-source/";
-    if(project == "spectre-cli") {
-        logo = "/assets/open-source/spectre-cli/logo.svg";
-        link = "/open-source/spectre-cli/";
-    }
-}
 
 <body class="d-flex flex-column">
     <div class="flex-grow-1 d-flex flex-column">
