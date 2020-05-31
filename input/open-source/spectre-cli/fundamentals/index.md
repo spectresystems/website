@@ -1,4 +1,4 @@
-Title: Fundamentals
+Hidden: True
 Order: 3
 ---
 
