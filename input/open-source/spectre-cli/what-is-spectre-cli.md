@@ -115,5 +115,3 @@ And most importantly at all, the type system guides me to do the right thing. I 
 commands in non-compatible ways, and if I want to add a new top-level `add-package` command 
 (or move the command completely), it's just a single line to change. This makes it easy to 
 experiment and makes the CLI experience a first class citizen of your application.
-
-<?# Children /?>
