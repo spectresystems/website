@@ -34,7 +34,33 @@ Description: Release notes for Ghostly
                     <span class="badge badge-danger">Fixed</span>
                 }
             </td>
-            <td>@entry.Description</td>
+            <td>
+                <span>@entry.Description</span>
+                @if(!string.IsNullOrEmpty(entry.Author)) 
+                {
+                    <br />
+                    <small>
+                        Thanks to 
+                        <a href="@entry.AuthorGitHub">@entry.Author</a> who 
+                        
+                        @if(entry.Kind == "bug") {
+                            <span>reported</span>
+                        } else {
+                            <span>suggested</span>
+                        }
+                        
+                        this!
+                    </small>
+                }
+            </td>
+            <td>
+                @if(!string.IsNullOrWhiteSpace(entry.Link)) 
+                {
+                    <span class="float-right">
+                        <a href="@entry.Link"><i class="fab fa-github"></i></a>
+                    </span>
+                }
+            </td>
         </tr>
     }
     </tbody>

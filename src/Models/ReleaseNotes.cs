@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace Site
 {
@@ -21,5 +22,8 @@ namespace Site
         public string Kind { get; set; }
         public string Description { get; set; }
         public string Link { get; set; }
+        public string Author { get; set; }
+        [JsonProperty("author_github")]
+        public string AuthorGitHub { get; set; }
     }
 }

@@ -21,7 +21,9 @@
                 {
                     "kind": "bug",
                     "description": "Issues not synchronizing sometimes.",
-                    "link": "https://github.com/spectresystems/ghostly/issues/39"
+                    "link": "https://github.com/spectresystems/ghostly/issues/39",
+                    "author": "Dave Glick",
+                    "author_github": "daveaglick"
                 },
                 {
                     "kind": "bug",
@@ -40,7 +42,9 @@
                 {
                     "kind": "bug",
                     "description": "Emojis in labels should now appear correctly.",
-                    "link": "https://github.com/spectresystems/ghostly/issues/42"
+                    "link": "https://github.com/spectresystems/ghostly/issues/42",
+                    "author": "Maurice Kevenaar",
+                    "author_github": "mkevenaar"
                 },
                 {
                     "kind": "improvement",
@@ -49,12 +53,16 @@
                 {
                     "kind": "feature",
                     "description": "Added \"Mark all as read\" context menu for categories.",
-                    "link": "https://github.com/spectresystems/ghostly/issues/38"
+                    "link": "https://github.com/spectresystems/ghostly/issues/38",
+                    "author": "Dave Glick",
+                    "author_github": "daveaglick"
                 },
                 {
                     "kind": "feature",
                     "description": "Added \"Archive all\" context menu for Inbox.",
-                    "link": "https://github.com/spectresystems/ghostly/issues/35"
+                    "link": "https://github.com/spectresystems/ghostly/issues/35",
+                    "author": "Dave Glick",
+                    "author_github": "daveaglick"
                 }
             ]
         },
@@ -65,12 +73,16 @@
                 {
                     "kind": "feature",
                     "description": "Added button to open notification in browser.",
-                    "link": "https://github.com/spectresystems/ghostly/issues/34"
+                    "link": "https://github.com/spectresystems/ghostly/issues/34",
+                    "author": "Claire Novotny",
+                    "author_github": "clairernovotny"
                 },
                 {
                     "kind": "feature",
                     "description": "Added context menu to open notification in browser.",
-                    "link": "https://github.com/spectresystems/ghostly/issues/34"
+                    "link": "https://github.com/spectresystems/ghostly/issues/34",
+                    "author": "Claire Novotny",
+                    "author_github": "clairernovotny"
                 },
                 {
                     "kind": "improvement",
@@ -85,7 +97,9 @@
                 {
                     "kind": "feature",
                     "description": "Added button to run a single rule.",
-                    "link": "https://github.com/spectresystems/ghostly/issues/48"
+                    "link": "https://github.com/spectresystems/ghostly/issues/48",
+                    "author": "Maurice Kevenaar",
+                    "author_github": "mkevenaar"
                 },
                 {
                     "kind": "feature",
@@ -223,7 +237,34 @@
             "entries": [
                 {
                     "kind": "bug",
-                    "description": "Fixed bug where notification quick-buttons sometimes would disappear."
+                    "description": "Fixed bug where notification quick-buttons sometimes would disappear"
+                }
+            ]
+        },
+        {
+            "version": "1.9.0",
+            "date": "2020-06-26",
+            "entries": [
+                {
+                    "kind": "feature",
+                    "description": "Add menu option to mark all items in filter as unread",
+                    "link": "https://github.com/spectresystems/ghostly/issues/74",
+                    "author": "Maurice Kevenaar",
+                    "author_github": "mkevenaar"
+                },
+                {
+                    "kind": "bug",
+                    "description": "Queries should allow dots in string constants",
+                    "link": "https://github.com/spectresystems/ghostly/issues/72",
+                    "author": "Mike James",
+                    "author_github": "MikeCodesDotNET"
+                },
+                {
+                    "kind": "bug",
+                    "description": "Scrollbar is sometimes shown over hover icons",
+                    "link": "https://github.com/spectresystems/ghostly/issues/71",
+                    "author": "Maurice Kevenaar",
+                    "author_github": "mkevenaar"
                 }
             ]
         }
