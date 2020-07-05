@@ -267,6 +267,37 @@
                     "author_github": "mkevenaar"
                 }
             ]
+        },
+        {
+            "version": "1.10.0",
+            "date": "2020-07-05",
+            "entries": [
+                {
+                    "kind": "feature",
+                    "description": "Added ARM64 support.\\nGhostly now runs even better on your Windows 10 tablet!",
+                    "link": "https://twitter.com/sinclairinat0r/status/1180991201996152834?s=20",
+                    "author": "Jeremy Sinclair",
+                    "author_github": "snickler"
+                },
+                {
+                    "kind": "feature",
+                    "description": "Sync rules, categories and filters via GitHub Gists",
+                    "link": "https://github.com/spectresystems/ghostly/issues/33",
+                    "author": "Claire Novotny",
+                    "author_github": "clairernovotny"
+                },
+                {
+                    "kind": "feature",
+                    "description": "Added 🦆-emoji, because we need more ducks in our lives!"
+                },
+                {
+                    "kind": "bug",
+                    "description": "Non-profit details is now visible during synchronization",
+                    "link": "https://github.com/spectresystems/ghostly/issues/53",
+                    "author": "Sam Harwell",
+                    "author_github": "sharwell"
+                }
+            ]
         }
     ]
 }

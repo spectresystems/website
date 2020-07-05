@@ -20,7 +20,7 @@ Description: Release notes for Ghostly
     <h2>Ghostly @item.Version.ToString(3) <small class="float-right">@item.Date</small></h2>
     <table class="table table-borderless">
     <tbody>
-    @foreach (var entry in item.Entries.OrderBy(x => x.Kind))
+    @foreach (var entry in item.Entries.OrderBy(x => x.SortOrder))
     {
         <tr>
             <td width="80" style="padding-left: 0;">
@@ -35,13 +35,13 @@ Description: Release notes for Ghostly
                 }
             </td>
             <td>
-                <span>@entry.Description</span>
+                <span>@Html.Raw(entry.Description.Replace("\\n", "<br />"))</span>
                 @if(!string.IsNullOrEmpty(entry.Author)) 
                 {
                     <br />
                     <small>
                         Thanks to 
-                        <a href="@entry.AuthorGitHub">@entry.Author</a> who 
+                        <a href="https://github.com/@entry.AuthorGitHub">@entry.Author</a> who 
                         
                         @if(entry.Kind == "bug") {
                             <span>reported</span>
@@ -57,7 +57,14 @@ Description: Release notes for Ghostly
                 @if(!string.IsNullOrWhiteSpace(entry.Link)) 
                 {
                     <span class="float-right">
-                        <a href="@entry.Link"><i class="fab fa-github"></i></a>
+                        @if(entry.Link.StartsWith("https://twitter.com")) {
+                            <a href="@entry.Link"><i class="fab fa-twitter"></i></a>
+                        } else if(entry.Link.StartsWith("https://github.com")) {
+                            <a href="@entry.Link"><i class="fab fa-github"></i></a>
+                        } else {
+                            <a href="@entry.Link"><i class="fas fa-link"></i></a>
+                        }
+                        
                     </span>
                 }
             </td>
