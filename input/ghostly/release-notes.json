@@ -298,6 +298,30 @@
                     "author_github": "sharwell"
                 }
             ]
+        },
+        {
+            "version": "1.11.0",
+            "date": "2020-07-24",
+            "entries": [
+                {
+                    "kind": "feature",
+                    "description": "Added support for draft PRs."
+                },
+                {
+                    "kind": "feature",
+                    "description": "Show percentage for progress",
+                    "link": "https://github.com/spectresystems/ghostly/issues/54",
+                    "author": "Sam Harwell",
+                    "author_github": "sharwell"
+                },
+                {
+                    "kind": "bug",
+                    "description": "Fix bug that sometimes prevented profile export",
+                    "link": "https://github.com/spectresystems/ghostly/issues/76",
+                    "author": "Maurice Kevenaar",
+                    "author_github": "mkevenaar"
+                }
+            ]
         }
     ]
 }
