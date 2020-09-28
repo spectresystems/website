@@ -305,7 +305,7 @@
             "entries": [
                 {
                     "kind": "feature",
-                    "description": "Added support for draft PRs."
+                    "description": "Added support for draft PRs"
                 },
                 {
                     "kind": "feature",
@@ -318,6 +318,26 @@
                     "kind": "bug",
                     "description": "Fix bug that sometimes prevented profile export",
                     "link": "https://github.com/spectresystems/ghostly/issues/76",
+                    "author": "Maurice Kevenaar",
+                    "author_github": "mkevenaar"
+                }
+            ]
+        },
+        {
+            "version": "1.12.0",
+            "date": "2020-09-29",
+            "entries": [
+                {
+                    "kind": "feature",
+                    "description": "Added support for sharing items",
+                    "link": "https://github.com/spectresystems/ghostly/issues/78",
+                    "author": "Alistair Chapman",
+                    "author_github": "agc93"
+                },
+                {
+                    "kind": "bug",
+                    "description": "All items are marked as 'draft' in details view",
+                    "link": "https://github.com/spectresystems/ghostly/issues/79",
                     "author": "Maurice Kevenaar",
                     "author_github": "mkevenaar"
                 }
