@@ -342,6 +342,22 @@
                     "author_github": "mkevenaar"
                 }
             ]
+        },
+        {
+            "version": "1.13.0",
+            "date": "2020-10-28",
+            "entries": [
+                {
+                    "kind": "feature",
+                    "description": "Add option to show total number of unread items for a category"
+                },
+                {
+                    "kind": "feature",
+                    "description": "Add CTRL+Q shortcut to mark items as read",
+                    "author": "Loïc Sharma",
+                    "author_github": "loic-sharma"
+                }
+            ]
         }
     ]
 }
