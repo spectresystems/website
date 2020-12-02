@@ -358,6 +358,16 @@
                     "author_github": "loic-sharma"
                 }
             ]
+        },
+        {
+            "version": "1.14.0",
+            "date": "2020-12-02",
+            "entries": [
+                {
+                    "kind": "feature",
+                    "description": "Add support for muting categories"
+                }
+            ]
         }
     ]
 }
