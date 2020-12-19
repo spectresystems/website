@@ -368,6 +368,16 @@
                     "description": "Add support for muting categories"
                 }
             ]
+        },
+        {
+            "version": "1.15.0",
+            "date": "2020-12-19",
+            "entries": [
+                {
+                    "kind": "feature",
+                    "description": "Add initial support for discussions"
+                }
+            ]
         }
     ]
 }
