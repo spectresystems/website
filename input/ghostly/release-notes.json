@@ -378,6 +378,16 @@
                     "description": "Add initial support for discussions"
                 }
             ]
+        },
+        {
+            "version": "1.16.0",
+            "date": "2021-08-24",
+            "entries": [
+                {
+                    "kind": "feature",
+                    "description": "Ghostly is now completely free to use!"
+                }
+            ]
         }
     ]
 }
